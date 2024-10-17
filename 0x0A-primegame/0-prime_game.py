@@ -4,6 +4,7 @@ This module defines a function that simulates a prime
 number game between Maria and Ben.
 """
 
+
 def isWinner(x, nums):
     """
     Determines the winner
@@ -28,7 +29,9 @@ def isWinner(x, nums):
 
     prime_count = [0] * (max_num + 1)
     for i in range(1, max_num + 1):
-        prime_count[i] = prime_count[i - 1] + (1 if i in primes_up_to_max else 0)
+        prime_count[i] = prime_count[i - 1] + (
+            1 if i in primes_up_to_max else 0
+        )
 
     maria_wins = 0
     ben_wins = 0
